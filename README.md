@@ -95,33 +95,7 @@ Os valores saem **exatamente como aparecem no Excel**: `4` na coluna E vira `4/7
 
 As colunas G, I, J, K e L são fórmulas. Quando o arquivo é salvo pelo Excel, o valor calculado vai junto e o app lê normalmente. Se por algum motivo vier vazio, o app se vira: repete o último valor preenchido acima (Book, Midterm, Class, Date) e recalcula o conceito Overall a partir de Listening/Speaking/Writing (A=10, B=7,5, C=5, D=2,5; ≥85% = A, ≥70% = B, ≥50% = C, abaixo = D). Quando isso acontece, aparece um aviso amarelo na tela.
 
----
 
-## Trocar a senha
-
-No topo do `app.py`:
-
-```python
-SENHA_PADRAO = "030826"
-```
-
-Se publicar o app na internet, é melhor não deixar a senha no código — veja a seção seguinte.
-
-## Publicar online (opcional, gratuito)
-
-Assim dá para usar do celular ou de outro computador, sem instalar nada.
-
-1. Crie uma conta no GitHub e um repositório (pode ser privado) com o `app.py` e o `requirements.txt`.
-2. Entre em <https://share.streamlit.io> com essa conta do GitHub e clique em **New app**.
-3. Aponte para o repositório e para o arquivo `app.py`.
-4. Em **Advanced settings → Secrets**, cole:
-
-   ```toml
-   APP_PASSWORD = "030826"
-   ```
-
-   O app usa esse valor no lugar da senha do código.
-5. Clique em Deploy. Em um ou dois minutos você recebe um link `.streamlit.app`.
 
 ## Problemas comuns
 
